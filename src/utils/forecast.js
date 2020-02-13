@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) => {
             const currentTemp = body.currently.temperature;
             const rainChance = body.currently.precipProbability;
             callback(undefined, {
-                weather: body.daily.data[0].summary + " Your current temperature is " + currentTemp + " degrees c with a " + (rainChance * 100) + "% chance of rain."
+                weather: body.daily.data[0].summary + " Your current temperature is " + currentTemp + " degrees c with a " + (rainChance * 100) + "% chance of rain. The Moonphase is at " + body.daily.data[0].moonPhase + " and the Temperature High for the day is " + body.daily.data[0].temperatureHigh
             })
         }
     })
